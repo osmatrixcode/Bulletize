@@ -10,4 +10,4 @@ def init_routes(app):
         if request.method == "POST":
             yt_url = request.form.get("yt_url")
             print(yt_url)
-            return redirect("/")a
+            return redirect("/")
