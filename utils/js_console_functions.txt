@@ -1,0 +1,7 @@
+// Function to open the "more" section in YT
+const showMoreButton = document.querySelector('tp-yt-paper-button#expand');
+if (showMoreButton) {
+  showMoreButton.click();
+} else {
+  console.log("Show more button not found.");
+}
