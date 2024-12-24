@@ -6,7 +6,7 @@ import time
 
 open_more_script = "const showMoreButton = document.querySelector('tp-yt-paper-button#expand'); if (showMoreButton) {showMoreButton.click();} else {console.log('Show more button not found.');}"
 open_transcript_box_script = "document.querySelector('button[aria-label=\\'Show transcript\\']').click();"
-get_transcript_script="const transcript = [...document.querySelectorAll('.segment-text')].map(e => e.textContent).join(' '); console.log(transcript);"
+get_transcript_script="const transcript = [...document.querySelectorAll('.segment-text')].map(e => e.textContent).join(' '); console.log(transcript); return transcript"
 
 
 def ytTranscript(url):
@@ -15,7 +15,7 @@ def ytTranscript(url):
     driver = webdriver.Chrome(options=options)
     
     driver.get(url)
-    
+
     time.sleep(5)
     driver.execute_script(open_more_script)
     print("opened the 'more' section")
