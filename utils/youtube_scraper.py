@@ -10,12 +10,13 @@ open_transcript_box_script = "document.querySelector('button[aria-label=\\'Show 
 
 
 def ytTranscript(url):
-    options = Options()
-    options.add_argument("__headless")
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless=new")
     driver = webdriver.Chrome(options=options)
     
     driver.get(url)
     time.sleep(5)
+    print("Successful Headless Mode!")
     driver.execute_script(open_more_script)
     time.sleep(2)
     driver.execute_script(open_transcript_box_script)
