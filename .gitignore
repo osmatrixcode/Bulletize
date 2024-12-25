@@ -1,4 +1,5 @@
 *.todo
 *.env
 *.pyc
+*.txt
 __pycache__
