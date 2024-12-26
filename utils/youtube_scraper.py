@@ -27,8 +27,10 @@ def ytTranscript(url):
     driver.execute_script(open_transcript_box_script)
     print("opened the 'transcript' box")
     
-    time.sleep(20)
+    time.sleep(10)
     transcript = driver.execute_script(get_transcript_script)
+    transcript_string_size = len(transcript.split())
+    print("size of the string: " + str(transcript_string_size))
     print("outputted the actual transcript")
     print(transcript)
     
