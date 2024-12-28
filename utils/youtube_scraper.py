@@ -19,6 +19,7 @@ def ytTranscript(url):
     
     driver.get(url)
 
+    #run 3 console scripts in URL to eventually get the transcript
     time.sleep(5)
     driver.execute_script(open_more_script)
     print("opened the 'more' section")
