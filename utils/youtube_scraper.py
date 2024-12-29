@@ -2,8 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from utils.ollama_local_llm import ollama_llm_talk
 import time
 import os
+
 
 
 
@@ -43,6 +45,11 @@ def ytTranscript(url):
     file_path = os.path.join(transcripts_folder,"yt_transcript.txt")
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(transcript)
+
+    # pass transcript to local LLM (dont need to open and close txt file!)
+    ollama_llm_talk(transcript)
+
+    
 
 
     # driver.quit()
