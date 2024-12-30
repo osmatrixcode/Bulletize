@@ -39,10 +39,10 @@ def ytTranscript(url):
     
     # Save transcript to a .txt file
     project_root = os.path.dirname(os.path.abspath(__file__))
-    transcripts_folder = os.path.join(project_root, "../transcripts")
-    os.makedirs(transcripts_folder, exist_ok = True)
+    text_folder = os.path.join(project_root, "../text_files")
+    os.makedirs(text_folder, exist_ok = True)
 
-    file_path = os.path.join(transcripts_folder,"yt_transcript.txt")
+    file_path = os.path.join(text_folder,"yt_transcript.txt")
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(transcript)
 
