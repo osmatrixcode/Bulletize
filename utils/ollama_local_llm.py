@@ -14,11 +14,7 @@ import os
 
 def ollama_llm_talk(transcript):
 
-# filename = "yt_transcript.txt"
-# file_path = os.path.join("..","transcripts",filename)
 
-# with open(file_path, "r") as file:
-#   content = file.read()
   print("Waiting for LLM Response...")
   stream = chat(
       model='llama3.2',
@@ -39,6 +35,7 @@ def ollama_llm_talk(transcript):
     llm_response += chunk['message']['content']
     print(chunk['message']['content'], end='', flush=True)
 
+  #save llm response to a .txt file 
   project_root = os.path.dirname(os.path.abspath(__file__))
   text_folder = os.path.join(project_root, "../text_files")
   os.makedirs(text_folder, exist_ok = True)
