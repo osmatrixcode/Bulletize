@@ -8,6 +8,8 @@ def init_routes(app):
         return render_template("index.html")
 
 
+
+
     @app.route("/url_submission", methods=["POST"])
     def url_submission_route():
         if request.method == "POST":
@@ -16,6 +18,8 @@ def init_routes(app):
             ytTranscript(yt_url)
             return redirect("/success")
         
+
+
     @app.route("/success", methods=["GET"])
     def success():
         # open .txt file to read, display to /success url
@@ -23,9 +27,9 @@ def init_routes(app):
         text_folder = os.path.join(project_root, "../text_files")
         os.makedirs(text_folder, exist_ok = True)
 
-        response = ""
+
         file_path = os.path.join(text_folder,"llm_response.txt")
         with open(file_path, "r", encoding="utf-8") as file:
             file_content = file.read()
         print(file_content)
-        return file_content
+        return render_template("response.html", llm_response = file_content)
