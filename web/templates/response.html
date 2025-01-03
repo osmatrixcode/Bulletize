@@ -7,16 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
-    <h1>Summarize YouTube Videos</h1>
+<body class="px-[10%] py-[15%]">
+    <h1 class="text-9xl">Summarise YouTube Videos</h1>
     <form action="/url_submission" method="post">
         <label for="yt_url">Input Youtube URL</label>
-        <input type="text" id="yt_url" name="yt_url">
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="yt_url" name="yt_url">
         <br><br>
-        <button type="submit">Submit</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
+        <br><br>
       </form>
       
-      <p>
+      <p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
          {{llm_response}}
       </p>
 </body>
