@@ -19,6 +19,14 @@ def init_routes(app):
             return redirect("/success")
         
 
+    @app.errorhandler(Exception)
+    def handle_all_errors(e):
+        app.logger.error(f"Error occurred: {e}")
+        status_code = getattr(e, 'code', 500)
+
+        return render_template("error.html", status_code=status_code, error=str(e))
+
+
 
     @app.route("/success", methods=["GET"])
     def success():

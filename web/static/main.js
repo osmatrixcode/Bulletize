@@ -1,5 +1,3 @@
-console.log("hello world");
-
 
 function changeButton(button) {
     // button.disabled = true;
