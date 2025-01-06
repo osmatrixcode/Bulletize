@@ -3,11 +3,11 @@ from utils.youtube_scraper import ytTranscript
 import os
 
 def init_routes(app):
+
+
     @app.route("/", methods=["GET", "POST"])
     def index():
         return render_template("index.html")
-
-
 
 
     @app.route("/url_submission", methods=["POST"])
@@ -23,9 +23,7 @@ def init_routes(app):
     def handle_all_errors(e):
         app.logger.error(f"Error occurred: {e}")
         status_code = getattr(e, 'code', 500)
-
         return render_template("error.html", status_code=status_code, error=str(e))
-
 
 
     @app.route("/success", methods=["GET"])

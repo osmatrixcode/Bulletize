@@ -1,6 +1,13 @@
-
+// Function will change style of the button and clear the llm_response element
 function changeButton(button) {
-    // button.disabled = true;
+
+    // Clear llm_response element if exists
+    llm_response_element = document.getElementById("llm_response_element");
+    if (llm_response_element) {
+      llm_response_element.remove();
+    } else {
+      pass
+    }
 
     // Change button content
     button.innerHTML = `
