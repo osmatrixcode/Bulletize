@@ -3,15 +3,6 @@ from ollama import ChatResponse
 import os
 
 
-                # Given the following transcript of a video or lecture, extract the most practical and actionable steps or key takeaways. 
-                # The output should be concise and focused on specific actions, strategies, or advice that can be immediately implemented, 
-                # making sure it is practical exercises you can do right now. From these, can you generate some 'actionable' exercises, goals, tasks etc... 
-                # Avoid generalizations or irrelevant details.
-                # Present the steps in a clear, actionable format
-
-                # here is the transcript:
-                # {transcript}
-
 def ollama_llm_talk(transcript):
 
 
@@ -19,13 +10,14 @@ def ollama_llm_talk(transcript):
   stream = chat(
       model='llama3.2',
       messages=[{'role': 'user', 'content': f"""
-                Given the following transcript of a video or lecture, extract the most practical, 
-                actionable steps for the viewer to implement immediately. Focus on the specific actions that should be taken, 
-                how to do them, and why they are effective. Each action should include clear instructions, specific tools or resources,
-                and tangible goals or tasks. Avoid generalizations and unnecessary details. Present the response in a clear,
-                step-by-step format that emphasizes what needs to be done and how to execute it.
+                Given the following transcript of a video or lecture, identify and infer the most practical and actionable steps the viewer can implement immediately. Focus on:
 
-                Here is the transcript: {transcript}
+                Specific actions: Clearly state what the viewer should do, breaking down complex tasks into manageable steps.
+                Instructions: Explain how to carry out each action effectively, referencing relevant tools or methods when applicable.
+                Effectiveness: Highlight why each step is impactful or beneficial.
+                Present the response as a concise, numbered list in a step-by-step format. Use plain language and avoid unnecessary details, repetition, or generalizations.
+
+                Transcript: {transcript}
                 """}],
       stream=True,
       )
