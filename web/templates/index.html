@@ -15,7 +15,19 @@
         <button onclick="changeButton(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
       </form>
 
+      <br>
+      <br>
+      <hr>
+      <br>
 
+      <h6 class="text-xl underline font-bold">How It Works: </h6>
+      <ol class="list-decimal list-inside">
+          <li>When you submit a YouTube URL, we extract the video transcript using code. </li>
+          <li>Next, we process the transcript with your local LLM, using a carefully crafted prompt to generate a response.</li>
+          <li>Once the LLM finishes generating a response <b>(it may take a while)</b>, we refine the output for clarity and readability..</li>
+          <li>Finally, we deliver the polished response directly to you!</li>
+        </ol>
+  
       <script src="../static/main.js"> </script>
 </body>
 </html>

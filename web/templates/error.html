@@ -22,13 +22,26 @@
       <br><br>
 
     <h6 class="text-xl underline font-bold">Troubleshooting Tips: </h6>
-    <ul class="list-disc">
-        <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-        <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-        <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-
+    <ul class="list-disc list-inside">
+        <li>Check if Ollama is running in your computer.</li>
+        <li>Make sure the URL is for a single video on YouTube (nothing else).</li>
+        <li>Double check if your YouTube video has an actual transcript! (some videos may not have a transcript, such as classical music videos).</li>
+        <li>If your internet connection is slow, find a solution if possible to speed it up.</li>
         <!-- ... -->
       </ul>
+
+      <br>
+      <hr>
+      <br>
+
+
+      <h6 class="text-xl underline font-bold">How It Works: </h6>
+      <ol class="list-decimal list-inside">
+          <li>When you submit a YouTube URL, we extract the video transcript using code. </li>
+          <li>Next, we process the transcript with your local LLM, using a carefully crafted prompt to generate a response.</li>
+          <li>Once the LLM finishes generating a response <b>(it may take a while)</b>, we refine the output for clarity and readability..</li>
+          <li>Finally, we deliver the polished response directly to you!</li>
+      </ol>
 
 
 </body>
