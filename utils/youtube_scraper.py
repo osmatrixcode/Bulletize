@@ -16,7 +16,7 @@ get_transcript_script="const transcript = [...document.querySelectorAll('.segmen
 
 def ytTranscript(url):
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless=new")
+    options.add_argument("--headless=new")
     driver = webdriver.Chrome(options=options)
     
     driver.get(url)
@@ -25,7 +25,7 @@ def ytTranscript(url):
     time.sleep(5)
     driver.execute_script(open_more_script)
     print("opened the 'more' section")
-    
+
     time.sleep(2)
     driver.execute_script(open_transcript_box_script)
     print("opened the 'transcript' box")
