@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from utils.youtube_scraper import ytTranscript
 import os
-
+import re
 def init_routes(app):
 
 
@@ -37,5 +37,8 @@ def init_routes(app):
         file_path = os.path.join(text_folder,"llm_response.txt")
         with open(file_path, "r", encoding="utf-8") as file:
             file_content = file.read()
-        print(file_content)
-        return render_template("response.html", llm_response = file_content)
+        
+        bolded_text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', file_content)
+
+        print(bolded_text)
+        return render_template("response.html", llm_response = bolded_text)
