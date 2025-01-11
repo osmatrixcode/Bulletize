@@ -1,6 +1,7 @@
 *.todo
 *.env
 *.pyc
-*.txt
 *.DS_Store
 __pycache__
+text_files/llm_response.txt
+text_files/yt_transcript.txt
