@@ -51,5 +51,6 @@ Transform YouTube videos into concise, actionable summaries with ease! Bulletize
    ```
    flask run
    ```
-6. Open the Flask server's URL in your web browser to start using Bulletize.
+6. Make sure you have Ollama running in your local system.
+7. Open the Flask server's URL in your web browser to start using Bulletize.
 
