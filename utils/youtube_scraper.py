@@ -49,7 +49,4 @@ def ytTranscript(url):
     # pass transcript to local LLM (dont need to open and close txt file!)
     ollama_llm_talk(transcript)
 
-    
-
-
     # driver.quit()
