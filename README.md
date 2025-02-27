@@ -1,6 +1,6 @@
 # 📜 Bulletize: YouTube Summary Tool
 
-Transform YouTube videos into concise, actionable summaries with ease! Bulletize extracts transcripts, summarises key points, and delivers practical takeaways.
+Transform YouTube videos into concise, actionable summaries with ease! Bulletize extracts transcripts, summarises key points, and delivers practical takeaways. This tool works best with self-improvement style videos!
 
 ---
 
