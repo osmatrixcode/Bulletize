@@ -6,7 +6,7 @@ Transform YouTube videos into concise, actionable summaries with ease! Bulletize
 
 ## ✨ Features
 
-- 🎥 **Input YouTube Link**: Provide a YouTube video URL, and the tool will fetch the transcript (if available).
+- 🎥 **Input YouTube Link**: Provide a YouTube video URL, and the tool will fetch the transcript.
 - 📄 **Transcript Extraction**: Automatically retrieves and processes video transcripts.
 - 🤖 **AI Summarisation**: Generates a concise, actionable summary from the transcript.
 - 🌟 **Sleek Web Interface**: Built with TailwindCSS for an intuitive user experience.
